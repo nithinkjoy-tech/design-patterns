@@ -9,38 +9,38 @@ class CreatedState extends OrderState {
 }
 
 class ConfirmedState extends OrderState {
-  updateState(order){
-    console.log("order created")
+  updateState(order) {
+    console.log("order created");
     order.setState(new ShippedState());
   }
 }
 
 class ShippedState extends OrderState {
-    updateState(order){
-        console.log("order confirmed")
-        order.setState(new DeliveredState());
-    }
+  updateState(order) {
+    console.log("order confirmed");
+    order.setState(new DeliveredState());
+  }
 }
 
 class DeliveredState extends OrderState {
-    updateState(){
-        console.log("order shipped")
-        console.log("order delivered")
-    }
+  updateState() {
+    console.log("order shipped");
+    console.log("order delivered");
+  }
 }
 
 class Order {
-    constructor(){
-        this.state=new CreatedState();
-    }
+  constructor() {
+    this.state = new CreatedState();
+  }
 
-    setState(newState){
-        this.state=newState;
-    }
+  setState(newState) {
+    this.state = newState;
+  }
 
-    updateState(){
-        this.state.updateState(this);
-    }
+  updateState() {
+    this.state.updateState(this);
+  }
 }
 
 const order = new Order();

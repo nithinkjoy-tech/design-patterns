@@ -1,30 +1,27 @@
 class EmpDataGen {
-    constructor() {
+  constructor() {}
 
-    }
-
-    genCSVData(){
-        return "csv data"
-    }
+  genCSVData() {
+    return "csv data";
+  }
 }
 
 class EmpDataReciever {
-    constructor() {
-    }
+  constructor() {}
 
-    recieveData(data){
-        console.log(data)
-    }
+  recieveData(data) {
+    console.log(data);
+  }
 }
 
 class CSVtoJSON {
-    convert(data){
-        return data.toUpperCase()
-    }
+  convert(data) {
+    return data.toUpperCase();
+  }
 }
 
-let edg=new EmpDataGen()
-let edc=new CSVtoJSON()
-let convertedData=edc.convert(edg.genCSVData())
-let edr=new EmpDataReciever()
-edr.recieveData(convertedData)
+let edg = new EmpDataGen();
+let edc = new CSVtoJSON();
+let convertedData = edc.convert(edg.genCSVData());
+let edr = new EmpDataReciever();
+edr.recieveData(convertedData);

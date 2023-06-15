@@ -5,18 +5,18 @@ class StringMethod {
     this.data = data;
   }
   toUpper() {
-    this.data=this.data.toUpperCase();
+    this.data = this.data.toUpperCase();
     return this;
   }
 
   toLower() {
-    this.data=this.data.toLowerCase();
+    this.data = this.data.toLowerCase();
     return this;
   }
 
   toArray() {
-    this.data=this.data.split("");
-    return this
+    this.data = this.data.split("");
+    return this;
   }
 }
 

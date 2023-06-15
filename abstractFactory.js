@@ -1,10 +1,10 @@
 class Product {
   getChair() {
-    throw new Error("This should be implemented")
+    throw new Error("This should be implemented");
   }
 
   getTable() {
-    throw new Error("This should be implemented")
+    throw new Error("This should be implemented");
   }
 }
 
